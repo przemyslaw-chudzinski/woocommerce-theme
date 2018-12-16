@@ -9,36 +9,36 @@ const gulpMinify = require('gulp-minify');
 /* Css Files */
 const cssFiles = {
     files: [
-        'assets/css/animate.css',
-        'assets/css/bootstrap.css',
-        'assets/css/style.css',
-        'assets/css/revslider/revslider-index25.css',
-        'assets/css/colors/pink.css',
-        'style.css',
+        'assets/css/vendor/animate.css',
+        'assets/css/vendor/bootstrap.css',
+        'assets/css/vendor/style.css',
+        'assets/css/vendor/revslider/revslider-index25.css',
+        'assets/css/vendor/colors/pink.css',
+        'vendor/style.css',
     ],
     dest: 'bundle.css'
 };
 
 const jsFiles = {
     files: [
-        './assets/js/jquery.min.js',
-        './assets/js/bootstrap.min.js',
-        './assets/js/jquery.hoverIntent.min.js',
-        './assets/js/jquery.nicescroll.min.js',
-        './assets/js/waypoints.min.js',
-        './assets/js/wow.js',
-        './assets/js/waypoints-sticky.min.js',
-        './assets/js/jquery.debouncedresize.js',
-        './assets/js/retina.min.js',
-        './assets/js/owl.carousel.min.js',
-        './assets/js/jquery.themepunch.tools.min.js',
-        './assets/js/jquery.themepunch.revolution.min.js',
-        './assets/js/skrollr.min.js',
-        './assets/js/jquery.elevateZoom.min.js',
-        './assets/js/jquery.bootstrap-touchspin.min.js',
-        './assets/js/jquery.nouislider.min.js',
-        './assets/js/scripts.js',
-        './assets/js/main.js'
+        './assets/js/vendor/jquery.min.js',
+        './assets/js/vendor/bootstrap.min.js',
+        './assets/js/vendor/jquery.hoverIntent.min.js',
+        './assets/js/vendor/jquery.nicescroll.min.js',
+        './assets/js/vendor/waypoints.min.js',
+        './assets/js/vendor/wow.js',
+        './assets/js/vendor/waypoints-sticky.min.js',
+        './assets/js/vendor/jquery.debouncedresize.js',
+        './assets/js/vendor/retina.min.js',
+        './assets/js/vendor/owl.carousel.min.js',
+        './assets/js/vendor/jquery.themepunch.tools.min.js',
+        './assets/js/vendor/jquery.themepunch.revolution.min.js',
+        './assets/js/vendor/skrollr.min.js',
+        './assets/js/vendor/jquery.elevateZoom.min.js',
+        './assets/js/vendor/jquery.bootstrap-touchspin.min.js',
+        './assets/js/vendor/jquery.nouislider.min.js',
+        './assets/js/vendor/scripts.js',
+        './assets/js/vendor/main.js'
     ],
     dest: 'bundle.js'
 };
@@ -74,4 +74,8 @@ gulp.task('minify-js', function () {
             }
         }))
         .pipe(gulp.dest('./assets/js'));
+});
+
+gulp.task('watch:js', function () {
+    gulp.watch(['concat-js', 'minify-js']);
 });

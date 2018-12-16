@@ -29,7 +29,7 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="<?= ASSETS_PATH ?>/images/icons/faviconx72.png">
 
 	<!-- Modernizr -->
-	<script src="<?= ASSETS_PATH ?>/js/modernizr.js"></script>
+	<script src="<?= ASSETS_PATH ?>/js/vendor/modernizr.js"></script>
 
     <?php wp_head(); ?>
 

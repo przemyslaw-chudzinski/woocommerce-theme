@@ -44,7 +44,7 @@ get_template_part('partials/info-line');
 <!-- END -->
 </div>
 </div>
-<script src="<?= ASSETS_PATH ?>/js/bundle.js"></script>
+<script src="<?= ASSETS_PATH ?>/js/vendor/bundle.js"></script>
 <?php wp_footer(); ?>
 <script>
     (function () {

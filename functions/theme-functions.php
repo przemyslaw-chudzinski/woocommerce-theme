@@ -16,7 +16,7 @@ add_action('admin_init','belli_restrict_admin_dashboard');
 if(!function_exists('belli_register_additional_styles')){
 	function belli_register_additional_styles()
 	{
-        wp_register_style('belli-styles', get_template_directory_uri() .'/assets/css/bundle.min.css');
+        wp_register_style('belli-styles', get_template_directory_uri() .'/assets/css/vendor/bundle.min.css');
         wp_enqueue_style('belli-styles');
 
 //        wp_register_script('belli-scripts', get_template_directory_uri(). '/assets/js/bundle.min.js', [], false, true);

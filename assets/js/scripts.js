@@ -3,30 +3,36 @@ $.fn.reverse = [].reverse;
 /* *********************************************** */
 
 
-/* Shopping cart page */
+/*
+ * Shopping cart page
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
-
     $(document.body).on("updated_wc_div", function () {
         if ($.fn.TouchSpin) {
             // Vertical Spinner
             $(".vertical-spinner").TouchSpin({
                 verticalbuttons: true
             });
-
             //Horizontal spinner
             $(".horizontal-spinner").TouchSpin();
         }
     });
-
 })(jQuery);
 
-/* belli comment form */
+/*
+ * Belli comment form
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
-    let $textarea = $("#commentform #comment").addClass('form-control');
-    let $submitBtn = $("#commentform #submit").addClass('btn btn-custom');
+    $("#commentform #comment").addClass('form-control');
+    $("#commentform #submit").addClass('btn btn-custom');
 })(jQuery);
 
-/* belli ratings */
+/*
+ * Belli ratings
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
 
     let setDataValue = function ($ratingLinks) {
@@ -53,25 +59,23 @@ $.fn.reverse = [].reverse;
         $ratingLinks.on('click', function (e) {
 
             $ratingLinks.removeClass('rating-selected');
-
             setTimeout(() => {
                 $.each($ratingLinks,(index,link) => {
                     let $link = $(link);
                     $link.addClass('rating-selected');
-                    if ($link.hasClass('active')) {
-                        $ratingSelect.val($link.data('value'));
-                        return false;
-                    }
+                    $link.hasClass('active') ? $ratingSelect.val($link.data('value')) : null;
                 });
             },100);
-
         });
 
     });
 
 })(jQuery);
 
-/* Sorting and filtering */
+/*
+ * Sorting and filtering
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
 
     let $gridViewBtn = $('#grid-view'),
@@ -91,13 +95,7 @@ $.fn.reverse = [].reverse;
     function sortSelectInit() {
         if (currentFilter) {
             const options = $sortSelect.find('option');
-            console.log(options);
-            options.each(function (index, option) {
-                if ($(option).val() === currentFilter) {
-                    $(option).attr('selected', 'selected');
-                    return;
-                }
-            });
+            options.each((index, option) => $(option).val() === currentFilter ? $(option).attr('selected', 'selected') : null);
         }
     }
 
@@ -158,13 +156,9 @@ $.fn.reverse = [].reverse;
                 searchMatchList = search.match('view=list');
 
             if (searchMatchGrid) {
-                if (searchMatchGrid[0] === 'view=grid') {
-                    $gridViewBtn.addClass('active');
-                }
+                searchMatchGrid[0] === 'view=grid' ? $gridViewBtn.addClass('active') : null;
             } else if (searchMatchList) {
-                if (searchMatchList[0] === 'view=list') {
-                    $listViewBtn.addClass('active');
-                }
+                searchMatchList[0] === 'view=list' ? $listViewBtn.addClass('active') : null;
             } else {
                 $gridViewBtn.addClass('active');
             }
@@ -176,7 +170,10 @@ $.fn.reverse = [].reverse;
 
 })(jQuery);
 
-/* Product categories widget */
+/*
+ * Product categories widget
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
 
     const $categoryWgt = $('#category-widget');
@@ -193,39 +190,32 @@ $.fn.reverse = [].reverse;
 })(jQuery);
 
 
-/* Add to cart button */
+/*
+ * Add to cart button
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
-
     $(document.body).on('adding_to_cart', function (e, $addToCartBtn) {
-
         $addToCartBtn.text('Dodaję...');
-
-        console.log('zmiana tesktu w przycisku', $addToCartBtn);
-
     });
-
-
     $(document.body).on('added_to_cart', function (e, fragments, cartHash, $addToCartBtn) {
         $addToCartBtn.text('Dodano do koszyka');
         $addToCartBtn.removeClass('btn-custom');
         $addToCartBtn.addClass('btn-success');
-        console.log('tutaj powinno zmienić wszystkie klasy css');
     });
-
 })(jQuery);
 
-/* Belli shop_attributes */
+/*
+ * Belli shop_attributes
+ * Author: Przemysław Chudziński
+  * */
 (function ($) {
-
     const $shopAttrs = $('table.shop_attributes');
-
     $shopAttrs.addClass('table');
-
 })(jQuery);
 
+
 (function ($) {
-
     $('.woocommerce-Tabs-panel h2').addClass('title-underblock custom mb30');
-
 })(jQuery);
 
