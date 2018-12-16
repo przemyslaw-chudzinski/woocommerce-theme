@@ -1,0 +1,25 @@
+{
+  "name": "belli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "concat-css": "gulp concat-css",
+    "minify-css": "gulp minify-css",
+    "concat-js": "gulp concat-js",
+    "minify-js": "gulp minify-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.0.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}

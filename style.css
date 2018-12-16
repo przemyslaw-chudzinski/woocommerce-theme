@@ -1,0 +1,200 @@
+/*
+Theme Name: Belli theme
+Author: Przemysław Chudziński
+Description: Dedykowany motyw dla sklepui belli
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Additional styles */
+.product .woocommerce-product-rating .product-ratings {
+    float: left;
+}
+
+.belli-get-all-products-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ordering - filters */
+.belli-ordering-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.belli-ordering-wrapper .belli-ordering li {
+    float: left;
+    padding: 0px 20px;
+}
+
+.belli-ordering-wrapper .belli-ordering li a {
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    background: #0f0f0f;
+    text-align: center;
+    min-width: 140px;
+}
+
+/* Shopping cart mini */
+.woocommerce-mini-cart .cart-action .checkout {
+    margin-left: 20px;
+}
+
+/* Woocommerce single product comments */
+.commentlist li .comment_container {
+
+    border: 1px solid #e3e3e3;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 30px;
+
+}
+
+.commentlist li .comment_container .comment-text {
+    width: 100%;
+    padding-left: 20px;
+}
+
+/* Ratings product for comments */
+p.stars > span {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+p.stars > span > a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+}
+
+p.stars > span > a:before {
+    content: "\2606";
+    position: absolute;
+    font-size: 30px;
+}
+
+p.stars > span > a:hover:before,
+p.stars > span > a:hover ~ a:before {
+    content: "\2605";
+    position: absolute;
+}
+
+p.stars > span .rating-selected:before {
+    content: "\2605" !important;
+}
+
+p.stars > span > a:hover:before {
+    content: "\2605";
+    position: absolute;
+}
+
+/* woocommerce pagination  */
+
+/* Woocommerce account navigation */
+.woocommerce-MyAccount-content {
+    clear: both;
+    padding-top: 50px;
+}
+
+.woocommerce-MyAccount-navigation {
+
+}
+
+.woocommerce-MyAccount-navigation ul {
+
+}
+
+.woocommerce-MyAccount-navigation ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+    display: inline-block;
+    min-width: 100px;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #505050;
+    color: #fff;
+}
+
+.woocommerce-Addresses {
+    display: flex;
+}
+
+.woocommerce-Address {
+    width: 30%;
+}
+
+.img-responsive-outer  img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+a.added_to_cart {
+    position: absolute;
+    display: none;
+}
+
+.belli-regular-price {
+    color: #000;
+}
+
+table.shop_attributes td, table.shop_attributes th {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+table.shop_attributes td > p {
+    margin: 0;
+}
+
+/* Products */
+.product-old-price > span.amount {
+    color: #000;
+}
+
+/* Pagination */
+.pagination-container {
+    clear: both;
+}
+
+ul.pagination  span.current, .woocommerce ul li.woocommerce-MyAccount-navigation-link.is-active a {
+    background-color: #fa558f;
+    color: #fff;
+    border-color: #fa558f;
+}
+
+/* Label */
+
+td.label {
+    color: #000;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Belli clear btn */
+.belli-clear-btn {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Regular price */
+.belli-regular-price .amount {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Button custom hover */
+.btn-custom:hover {
+    background-color: #c45162;
+    border-color: #c45162;
+}
